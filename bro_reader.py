@@ -1,7 +1,8 @@
 import pandas
 import logging
 
-class Bro:
+
+class bro_reader:
     def __init__(self, file_path):
         self.file_path = file_path
         self.result = file_path + "bro"
@@ -40,4 +41,10 @@ class Bro:
             log.close()
         except Exception as e:
             logging.error(e)
+
+    def read_logs_pandas(self):
+        #return pandas frame
+        pand
+        pandas.DataFrame()
+        return result
 

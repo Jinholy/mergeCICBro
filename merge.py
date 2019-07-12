@@ -1,7 +1,8 @@
 import sys
 import logging
 import pandas
-import 
+import cic_reader as cr
+import bro_reader as br
 
 class Merger:
     def __init__(self):
@@ -20,6 +21,13 @@ class Merger:
         print("merge")
 
 
-merger = Merger()
 
-merger.merge()
+
+
+rc = cr.cic_reader("/home/hott/honeypot/mergeCICBro/cic/2015-03-19_winnormal.pcap_Flow.csv")
+
+frame = rc.read_cic_pandas()
+print(frame[6]) #6: Time Stamp
+
+br = br.bro_reader("/home/hott/honeypot/mergeCICBro/bro/conn.log")
+br.bro_file_init
