@@ -56,9 +56,9 @@ class bro_merger:
 
 bm = bro_merger('/home/hott/honeypot/mergeCICBro/bro')
 
-feature_list = ['uid', 'ts', 'Z']
+feature_list = ['uid', 'ts', 'Z', 'answers']
 
 
 df = bm.get_bro_logs(feature_list)
 print(df)
-#bm.save_as_csv(df, 'utz')
+bm.save_as_csv(df, 'answers')
